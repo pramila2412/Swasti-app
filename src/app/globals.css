@@ -71,3 +71,29 @@
 .gradient-accent {
   background: linear-gradient(135deg, #0284c7 0%, #0d9488 50%, #10b981 100%);
 }
+
+@keyframes shiny-text {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.animate-shiny-text {
+  animation: shiny-text 4s linear infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float-slow 5s ease-in-out infinite;
+}

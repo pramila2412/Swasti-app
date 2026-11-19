@@ -4,6 +4,7 @@ import { apiGetSettings } from '@/lib/api';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingEmergencyBar from '@/components/FloatingEmergencyBar';
+import FloatingDock from '@/components/FloatingDock';
 import { ThemeProvider } from '@/context/ThemeContext';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -72,6 +73,7 @@ export default async function RootLayout({
             phone={setting?.phone2 || setting?.phone1}
             whatsapp={setting?.whatsappNumber}
           />
+          <FloatingDock />
         </ThemeProvider>
       </body>
     </html>
